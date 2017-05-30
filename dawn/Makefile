@@ -42,12 +42,11 @@ endef
 
 define Package/dawn/install
 	$(INSTALL_DIR) $(1)/usr/sbin
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/src/dawn $(1)/usr/sbin/
-
-	$(INSTALL_DIR) $(1)/etc/init.d/
-	$(INSTALL_BIN) ./files/dawn.init $(1)/etc/init.d/dawn
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/src/dawn $(1)/usr/sbin/dawn
+	$(INSTALL_DIR) $(1)/etc/init.d
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/files/dawn.init $(1)/etc/init.d/dawn
 	$(INSTALL_DIR) $(1)/etc/config
-	$(INSTALL_CONF) files/dawn.config $(1)/etc/config/dawn
+	$(INSTALL_CONF) $(PKG_BUILD_DIR)/files/dawn.config $(1)/etc/config/dawn
 endef
 
 $(eval $(call BuildPackage,dawn))

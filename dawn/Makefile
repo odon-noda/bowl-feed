@@ -5,17 +5,17 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=dawn
-PKG_VERSION:=1.1
-PKG_REV:=master
 PKG_RELEASE:=1
-PKG_MAINTAINER:=Nick Hainke <vincent@systemli.org>
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/PolynomialDivision/dawn-test.git
+PKG_SOURCE_VERSION:=master
 
 #PKG_SOURCE_VERSION:=$(PKG_REV)
 #PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION)-$(PKG_REV).tar.gz
 #PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
+PKG_MAINTAINER:=Nick Hainke <vincent@systemli.org>
+CMAKE_INSTALL:=1
 
 include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/cmake.mk

@@ -8,12 +8,8 @@ PKG_NAME:=dawn
 PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL:=https://github.com/PolynomialDivision/dawn-test.git
+PKG_SOURCE_URL:=https://github.com/berlin-open-wireless-lab/DAWN.git
 PKG_SOURCE_VERSION:=master
-
-#PKG_SOURCE_VERSION:=$(PKG_REV)
-#PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION)-$(PKG_REV).tar.gz
-#PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
 PKG_MAINTAINER:=Nick Hainke <vincent@systemli.org>
 CMAKE_INSTALL:=1
 
@@ -21,24 +17,17 @@ include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/cmake.mk
 
 define Package/dawn
-  SECTION:=utils
-  # Should this package be selected by default?
-  #DEFAULT:=n
-  CATEGORY:=Utilities
+  SECTION:=net
+  CATEGORY:=Network
   TITLE:= Decentralized wifi controller.
   MAINTAINER:= Nick Hainke <vincent@systemli.org>
-  URL:=https://polynomialdivision.github.io
+  URL:=https://github.com/berlin-open-wireless-lab/DAWN.git
   DEPENDS:=$(DRV_DEPENDS) +libubus +libubox +libblobmsg-json +libconfig #+ljson +ljson-c +lblobmsg_json  #+lblobmsg_json 
 endef
 
 define Package/dawn/description
  This package implements a decentralized wireless daemon.
 endef
-
-#define Build/Prepare
-#	mkdir -p $(PKG_BUILD_DIR)
-#	$(CP) ./src/* $(PKG_BUILD_DIR)/
-#endef
 
 define Package/dawn/install
 	$(INSTALL_DIR) $(1)/usr/sbin

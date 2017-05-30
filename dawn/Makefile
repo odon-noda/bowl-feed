@@ -21,18 +21,18 @@ include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/cmake.mk
 
 define Package/dawn
-	SECTION:=utils
-	# Should this package be selected by default?
-	#DEFAULT:=n
-	CATEGORY:=Utilities
-	TITLE:= Decentralized wifi controller.
-	MAINTAINER:= Nick Hainke <vincent@systemli.org>
-	URL:=https://polynomialdivision.github.io
-	DEPENDS:=$(DRV_DEPENDS) +libubus +libubox +libblobmsg-json +libconfig #+ljson +ljson-c +lblobmsg_json  #+lblobmsg_json 
+  SECTION:=utils
+  # Should this package be selected by default?
+  #DEFAULT:=n
+  CATEGORY:=Utilities
+  TITLE:= Decentralized wifi controller.
+  MAINTAINER:= Nick Hainke <vincent@systemli.org>
+  URL:=https://polynomialdivision.github.io
+  DEPENDS:=$(DRV_DEPENDS) +libubus +libubox +libblobmsg-json +libconfig #+ljson +ljson-c +lblobmsg_json  #+lblobmsg_json 
 endef
 
 define Package/dawn/description
-	This package implements a decentralized wireless daemon.
+ This package implements a decentralized wireless daemon.
 endef
 
 #define Build/Prepare

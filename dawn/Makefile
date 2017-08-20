@@ -22,7 +22,7 @@ define Package/dawn
   TITLE:= Decentralized wifi controller.
   MAINTAINER:= Nick Hainke <vincent@systemli.org>
   URL:=https://github.com/berlin-open-wireless-lab/DAWN.git
-  DEPENDS:=$(DRV_DEPENDS) +libubus +libubox +libblobmsg-json +libconfig +libuci +libgcrypt +glib
+  DEPENDS:=$(DRV_DEPENDS) +libubus +libubox +libblobmsg-json +libconfig +libuci +libgcrypt +libopenssl
 endef
 
 define Package/dawn/description

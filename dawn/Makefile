@@ -36,6 +36,8 @@ define Package/dawn/install
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/files/dawn.init $(1)/etc/init.d/dawn
 	$(INSTALL_DIR) $(1)/etc/config
 	$(INSTALL_CONF) $(PKG_BUILD_DIR)/files/dawn.config $(1)/etc/config/dawn
+	$(INSTALL_DIR) $(1)/etc/dawn
+	$(INSTALL_CONF) $(PKG_BUILD_DIR)/files/mac_list $(1)/etc/dawn/mac_list
 endef
 
 $(eval $(call BuildPackage,dawn))

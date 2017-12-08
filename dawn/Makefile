@@ -9,7 +9,7 @@ PKG_RELEASE:=6
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/berlin-open-wireless-lab/DAWN.git
-PKG_SOURCE_VERSION:=f69b1841b3b626fe2966803c017ca5271af6d88b 
+PKG_SOURCE_VERSION:=f3dd4fc30ec45e343c6acd4cfbf211a4cabddc7fe
 PKG_MAINTAINER:=Nick Hainke <vincent@systemli.org>
 CMAKE_INSTALL:=1
 
@@ -22,7 +22,7 @@ define Package/dawn
   TITLE:= Decentralized wifi controller.
   MAINTAINER:= Nick Hainke <vincent@systemli.org>
   URL:=https://github.com/berlin-open-wireless-lab/DAWN.git
-  DEPENDS:=$(DRV_DEPENDS) +libubus +libubox +libblobmsg-json +libconfig +libuci +libgcrypt +libopenssl +libiwinfo
+  DEPENDS:=$(DRV_DEPENDS) +libubus +libubox +libblobmsg-json +libconfig +libuci +libgcrypt +libiwinfo
 endef
 
 define Package/dawn/description

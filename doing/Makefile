@@ -5,11 +5,11 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=doing
-PKG_RELEASE:=6
+PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/PolynomialDivision/DOING.git
-PKG_SOURCE_VERSION:=38bdf3e3dc967c1acea10751fee1327ae7128c4c
+PKG_SOURCE_VERSION:=ab7a2422933d9ad4b4a23e2170b470455463b8b6
 PKG_MAINTAINER:=Nick Hainke <vincent@systemli.org>
 CMAKE_INSTALL:=1
 

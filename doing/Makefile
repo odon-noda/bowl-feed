@@ -36,7 +36,7 @@ define Package/doing/install
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/files/doing.init $(1)/etc/init.d/doing
 	$(INSTALL_DIR) $(1)/etc/config
 	$(INSTALL_CONF) $(PKG_BUILD_DIR)/files/doing.config $(1)/etc/config/doing
-	$(INSTALL_DIR) $(1)/etc/dawn
+	$(INSTALL_DIR) $(1)/etc/doing
 endef
 
-$(eval $(call BuildPackage,dawn))
+$(eval $(call BuildPackage,doing))

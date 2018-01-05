@@ -9,3 +9,4 @@ Add feed to 'feeds.conf'
 Run
 
     ./scripts feed update -a
+

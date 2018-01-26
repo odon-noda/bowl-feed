@@ -5,11 +5,11 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=dawn
-PKG_RELEASE:=6
+PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/berlin-open-wireless-lab/DAWN.git
-PKG_SOURCE_VERSION:=f9d7ac0adfdf812ef7de91b9fd8dcdf56c1ca39d
+PKG_SOURCE_VERSION:=5d52c806e6972a288a57629db9d24d5f4399622c
 PKG_MAINTAINER:=Nick Hainke <vincent@systemli.org>
 CMAKE_INSTALL:=1
 

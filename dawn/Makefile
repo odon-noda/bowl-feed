@@ -17,16 +17,16 @@ include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/cmake.mk
 
 define Package/dawn
-  SECTION:=net
-  CATEGORY:=Network
-  TITLE:= Decentralized wifi controller.
-  MAINTAINER:= Nick Hainke <vincent@systemli.org>
-  URL:=https://github.com/berlin-open-wireless-lab/DAWN.git
-  DEPENDS:=$(DRV_DEPENDS) +libubus +libubox +libblobmsg-json +libconfig +libuci +libgcrypt +libiwinfo +libustream-openssl +umdns
+    SECTION:=net
+    CATEGORY:=Network
+    TITLE:= Decentralized wifi controller.
+    MAINTAINER:= Nick Hainke <vincent@systemli.org>
+    URL:=https://github.com/berlin-open-wireless-lab/DAWN.git
+    DEPENDS:=$(DRV_DEPENDS) +libubus +libubox +libblobmsg-json +libconfig +libuci +libgcrypt +libiwinfo +libustream-openssl +umdns
 endef
 
 define Package/dawn/description
- This package implements a decentralized wireless daemon.
+    This package implements a decentralized wireless daemon.
 endef
 
 define Package/dawn/install

@@ -1,3 +1,7 @@
+#
+# This software is licensed under the Public Domain.
+#
+
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=dawn

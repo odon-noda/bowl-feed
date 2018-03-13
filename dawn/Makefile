@@ -9,7 +9,7 @@ PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/berlin-open-wireless-lab/DAWN.git
-PKG_SOURCE_VERSION:=04f1410b8a524e6ceed227b003eb628e406227b8
+PKG_SOURCE_VERSION:=3f50daf3eb993c378b83a663d919cb69b74bb54e
 PKG_MAINTAINER:=Nick Hainke <vincent@systemli.org>
 CMAKE_INSTALL:=1
 

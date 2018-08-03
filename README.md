@@ -16,5 +16,5 @@ If you want to install dawn
 
 If you want to install luci-app-dawn
 
-    ./scripts feed update luci-app-dawn
+    ./scripts feed install luci-app-dawn
 

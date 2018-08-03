@@ -10,3 +10,5 @@ Run
 
     ./scripts feed update -a
 
+    ./scripts feed install dawn
+    ./scripts feed update luci-app-dawn

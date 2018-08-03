@@ -6,8 +6,8 @@ s = m:section(NamedSection, "__hearingmap__")
 function s.render(self, sid)
     local tpl = require "luci.template"
     tpl.render_string([[
-		<ul>
-			<%
+        <ul>
+		    <%
             local utl = require "luci.util"
             local stat = utl.ubus("dawn", "get_hearing_map", { })
             local name, macs

@@ -9,7 +9,6 @@ s:option(Value, "low_rssi", "Low RSSI")
 s:option(Value, "freq", "5GHz")
 s:option(Value, "chan_util", "Channel Utilization")
 s:option(Value, "max_chan_util", "Above Maximum Channel Utilization")
-s:option(Value, "min_probe_count", "Minimum Number of Probe Requests")
 
 s = m:section(TypedSection, "metric", "Threshold", "Thresholds"); s.anonymous = true;
 s:option(Value, "bandwith_threshold", "Bandwidth Threshold")

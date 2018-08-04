@@ -31,4 +31,13 @@ s = m:section(TypedSection, "metric", "IEE802.11", "Reasons for denying"); s.ano
 s:option(Value, "deny_auth_reason", "Denying Authentication")
 s:option(Value, "deny_assoc_reason", "Denying Association")
 
+s = m:section(TypedSection, "times", "Time Configuration", "Time Configs"); s.anonymous = true;
+s:option(Value, "update_client", "Update Client Information Interval")
+s:option(Value, "denied_req_threshold", "Checking if client is connected")
+s:option(Value, "remove_client", "Remove Client Information")
+s:option(Value, "remove_probe", "Remove Hearing Map Information")
+s:option(Value, "update_hostapd", "Check for new Hostapd Sockets")
+s:option(Value, "update_tcp_con", "Check for new Routers")
+s:option(Value, "update_chan_util", "Update Channel Utilization Interval")
+
 return m

@@ -8,6 +8,7 @@ function s.render(self, sid)
 	tpl.render_string([[
 		<ul>
 			<%
+            		local status = require "luci.tools.ieee80211"
 			local utl = require "luci.util"
 			local stat = utl.ubus("dawn", "get_network", { })
 			local name, macs

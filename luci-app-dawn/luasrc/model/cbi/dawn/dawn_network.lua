@@ -31,7 +31,7 @@ function s.render(self, sid)
 					%>
 						<li>
 						<strong>Client is: </strong><%= mac2 %><br />
-						<strong>Frequency is: </strong><%= "%.3f" %( data2.freq / 1024 ) %>GHz<br />
+			                        <strong>Frequency is: </strong><%= "%.3f" %( data2.freq / 1000 ) %>GHz (Channel: <%= "%d" %( status.frequency_to_channel(data2.freq) ) %>)<br />
 						<strong>HT: </strong><%= (data2.ht == true) and "available" or "not available" %><br />
 						<strong>VHT: </strong><%= (data2.vht == true) and "available" or "not available" %><br />
 						<!--

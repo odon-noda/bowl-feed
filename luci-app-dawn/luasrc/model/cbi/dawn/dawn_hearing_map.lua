@@ -32,7 +32,7 @@ function s.render(self, sid)
                 %>
                     <li>
                         <strong>AP is: </strong><%= mac2 %><br />
-                        <strong>Frequency is: </strong><%= "%.3f" %( data2.freq / 1000 ) %>GHz (Channel: <%= "%d" %( status.frequency_to_channel(data2.freq) ) %>)<br />
+                        <strong>Frequency is: </strong><%= "%.3f" %( data2.freq / 1000 ) %> GHz (Channel: <%= "%d" %( status.frequency_to_channel(data2.freq) ) %>)<br />
                         <strong>HT support is: </strong><%= (data2.ht_capabilities == true and data2.ht_support == true) and "available" or "not available" %><br />
                         <strong>VHT support is: </strong><%= (data2.vht_capabilities == true and data2.vht_support == true) and "available" or "not available" %><br />
                         <!--

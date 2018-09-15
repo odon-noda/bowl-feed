@@ -10,6 +10,8 @@ function s.render(self, sid)
 			<%
             		local status = require "luci.tools.ieee80211"
 			local utl = require "luci.util"
+		        local sys = require "luci.sys"     
+		        local hosts = sys.net.host_hints() 
 			local stat = utl.ubus("dawn", "get_network", { })
 			local name, macs
 			for name, macs in pairs(stat) do
@@ -28,10 +30,14 @@ function s.render(self, sid)
 					<ul>
 					<%
 					local mac2, data2
-					for mac2, data2 in pairs(data) do
+					for mac2, data2 in pairs(data) do					
+						local host = mac2 and hosts[mac2]
 					%>
 						<li>
-						<strong>Client is: </strong><%= mac2 %><br />
+						<strong>Client: <%= mac2 %><br />
+                                              	<strong>Name:</strong> <%= host.name %><br />
+						<strong>IPv4:</strong> <%= host.ipv4 %><br />
+						<strong>IPv6:</strong> <%= host.ipv6 %><br /> 
 			                        <strong>Frequency is: </strong><%= "%.3f" %( data2.freq / 1000 ) %> GHz (Channel: <%= "%d" %( status.frequency_to_channel(data2.freq) ) %>)<br />
 						<strong>HT: </strong><%= (data2.ht == true) and "available" or "not available" %><br />
 						<strong>VHT: </strong><%= (data2.vht == true) and "available" or "not available" %><br />
@@ -55,5 +61,3 @@ function s.render(self, sid)
 		</ul>
 	]])
 end
-
-return m

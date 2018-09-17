@@ -61,3 +61,5 @@ function s.render(self, sid)
 		</ul>
 	]])
 end
+
+return m
